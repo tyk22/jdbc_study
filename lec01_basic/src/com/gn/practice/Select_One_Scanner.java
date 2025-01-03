@@ -30,7 +30,7 @@ public static void main(String[] args) {
 				"FROM test "+"WHERE t_no ="+number);
 //		List<Map<String,Object>> list =
 //				new ArrayList<Map<String,Object>>();
-		List<Test> map = new ArrayList<Test>();
+		// List<Test> map = new ArrayList<Test>();
 		Test t = new Test();
 		while(rs.next()) {
 			t.setTsetNo(rs.getInt("t_no"));
