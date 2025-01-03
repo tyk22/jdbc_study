@@ -1,6 +1,7 @@
 package com.gn.study.view;
 
 import java.util.List;
+import java.util.Map;
 import java.util.Scanner;
 
 import com.gn.study.controller.MemberController;
@@ -69,7 +70,13 @@ public class MemberMenu {
 		List<Member> list = mc.selectMemberAll();
 		// (1) 만약에 list가 비어있다면 > 조회된 결과가 없습니다
 		// (2) Member 목록 출력
-		
+		if(list.isEmpty()) {
+			System.out.println("조회된 결과가 없습니다.");
+		}else {
+			for(Member m : list) {
+				System.out.println(m);
+			}
+		}
 	}
 	
 	
