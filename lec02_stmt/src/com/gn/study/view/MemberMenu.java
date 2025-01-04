@@ -32,6 +32,7 @@ public class MemberMenu {
 			switch(menu) {
 			case 1 : createMember();break; 
 			case 2 : selectMemberAll();break;
+			case 3 : idSearch();break;
 			case 0 : System.out.println("잘가요~안녕~");return;
 			
 			default : System.out.println("잘못된 번호입니다.");break;
@@ -78,7 +79,24 @@ public class MemberMenu {
 			}
 		}
 	}
+	public void idSearch() {
+		System.out.print("회원 아이디 :");
+		String id = sc.next();
+		List<Member> list = mc.selectId(id);
+		if(list.isEmpty()) {
+			System.out.println("조회된 결과가 없습니다");
+		}else {
+			for(Member m :list) {
+				System.out.println(m);
+			}
+		}
+		
 	
+		
+		
+		
+	}
+
 	
 	
 	

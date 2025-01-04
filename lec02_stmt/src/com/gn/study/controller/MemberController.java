@@ -12,6 +12,11 @@ public class MemberController {
 		return list;
 	}
 	
+	public List<Member> selectId(String id){
+		List<Member> list = new MemberDao().selectId(id);
+		return list;
+	}
+	
 	public int insertMember(String memberId, String memberPw, String memberName
 			,String memberEmail ,String memberPhone, String memberGender) {
 		Member m = new Member(memberId,memberPw,memberName,memberEmail,memberPhone,memberGender);
@@ -24,4 +29,7 @@ public class MemberController {
 //		}
 		return result;
 	}
+	
+	
+	
 }
