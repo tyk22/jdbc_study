@@ -17,6 +17,13 @@ public class Member {
 	public Member() {
 	
 	}
+	public Member(int memberno,String memberId, String memberPw) {
+		this.memberno=memberno;
+		this.memberPw = memberPw;
+		this.memberName = memberName;
+		this.regDate = LocalDateTime.now();
+		this.modDate = LocalDateTime.now();
+	}
 	public Member(String memberId, String memberPw, String memberName, String memberEmail,
 			String memberPhone, String memberGender) {
 		this.memberId = memberId;
@@ -26,7 +33,10 @@ public class Member {
 		this.memberPhone = memberPhone;
 		this.memberGender = memberGender;
 	}
-	
+	public Member(String memberId, String memberPw) {
+		this.memberId = memberId;
+		this.memberPw = memberPw;
+	}
 	
 	public Member(int memberno, String memberId, String memberPw, String memberName, String memberEmail,
 			String memberPhone, String memberGender, LocalDateTime regDate, LocalDateTime modDate) {
@@ -39,6 +49,12 @@ public class Member {
 		this.memberGender = memberGender;
 		this.regDate = regDate;
 		this.modDate = modDate;
+	}
+	public Member(String memberName, String memberPhone, String memberEmail) {
+		this.memberName = memberName;
+		this.memberPhone = memberPhone;
+		this.memberEmail = memberEmail;
+		
 	}
 	public int getMemberno() {
 		return memberno;
